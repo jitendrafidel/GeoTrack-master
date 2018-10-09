@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DevicePickeViewViewController">
+            <connections>
+                <outlet property="pickeView" destination="JIO-qG-Q3y" id="eGf-AT-IDJ"/>
+                <outlet property="pickerBackgroundView" destination="3cC-Eg-vja" id="odZ-G0-3aZ"/>
+                <outlet property="view" destination="CfN-ke-r4A" id="QTP-uE-b75"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="CfN-ke-r4A">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ak-LV-0w6">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="olN-cw-bJD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cC-Eg-vja">
+                                <rect key="frame" x="160" y="218" width="280" height="229"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JIO-qG-Q3y">
+                                        <rect key="frame" x="0.0" y="12" width="280" height="155"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="-1" id="dfl-aw-auw"/>
+                                            <outlet property="delegate" destination="-1" id="glP-6f-Ln6"/>
+                                        </connections>
+                                    </pickerView>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apT-1B-c6J" userLabel="Separator2 View">
+                                        <rect key="frame" x="0.0" y="163" width="280" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="yxe-eL-vV5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-zN-xTi" userLabel="Separator3 View">
+                                        <rect key="frame" x="140" y="164" width="1" height="65"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="VKr-r9-Iuh"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLm-BL-DCp">
+                                        <rect key="frame" x="150" y="195" width="122" height="30"/>
+                                        <state key="normal" title="Set Device">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnSelectPressed:" destination="-1" eventType="touchUpInside" id="EAp-ms-eab"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znK-Vl-k3n">
+                                        <rect key="frame" x="8" y="195" width="132" height="30"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnQuitPressed:" destination="-1" eventType="touchUpInside" id="1oh-pt-bNj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2oz-zN-xTi" secondAttribute="bottom" id="36O-y7-xxX"/>
+                                    <constraint firstAttribute="centerX" secondItem="2oz-zN-xTi" secondAttribute="centerX" id="7eJ-DV-w4E"/>
+                                    <constraint firstItem="znK-Vl-k3n" firstAttribute="leading" secondItem="3cC-Eg-vja" secondAttribute="leading" constant="8" id="9ox-E8-ezv"/>
+                                    <constraint firstAttribute="width" constant="280" id="Bby-eE-A4b"/>
+                                    <constraint firstAttribute="bottom" secondItem="OLm-BL-DCp" secondAttribute="bottom" constant="4" id="C02-fb-txF"/>
+                                    <constraint firstItem="apT-1B-c6J" firstAttribute="leading" secondItem="3cC-Eg-vja" secondAttribute="leading" id="Igh-Np-jzo"/>
+                                    <constraint firstAttribute="bottom" secondItem="znK-Vl-k3n" secondAttribute="bottom" constant="4" id="JN2-sc-hoJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="JIO-qG-Q3y" secondAttribute="trailing" id="Kyl-ka-2dU"/>
+                                    <constraint firstAttribute="trailing" secondItem="apT-1B-c6J" secondAttribute="trailing" id="OS3-z6-yck"/>
+                                    <constraint firstItem="apT-1B-c6J" firstAttribute="top" secondItem="JIO-qG-Q3y" secondAttribute="bottom" constant="-4" id="T0y-gS-rdB"/>
+                                    <constraint firstItem="JIO-qG-Q3y" firstAttribute="leading" secondItem="3cC-Eg-vja" secondAttribute="leading" id="Ure-l8-3fg"/>
+                                    <constraint firstAttribute="trailing" secondItem="OLm-BL-DCp" secondAttribute="trailing" constant="8" id="cEg-cR-NmM"/>
+                                    <constraint firstAttribute="centerY" secondItem="JIO-qG-Q3y" secondAttribute="centerY" constant="25" id="cY7-Qp-vwp"/>
+                                    <constraint firstAttribute="height" constant="229" id="doh-mA-ZJ0"/>
+                                    <constraint firstItem="2oz-zN-xTi" firstAttribute="leading" secondItem="znK-Vl-k3n" secondAttribute="trailing" id="ocW-Le-q35"/>
+                                    <constraint firstItem="2oz-zN-xTi" firstAttribute="top" secondItem="apT-1B-c6J" secondAttribute="bottom" id="pNu-AR-quz"/>
+                                    <constraint firstItem="OLm-BL-DCp" firstAttribute="leading" secondItem="2oz-zN-xTi" secondAttribute="trailing" constant="9" id="rFb-gG-pMK"/>
+                                    <constraint firstAttribute="centerX" secondItem="JIO-qG-Q3y" secondAttribute="centerX" id="tv3-3F-IPh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="3cC-Eg-vja" secondAttribute="centerX" id="ntg-fR-p3c"/>
+                            <constraint firstAttribute="centerY" secondItem="3cC-Eg-vja" secondAttribute="centerY" constant="-32.5" id="uHm-aG-A35"/>
+                        </constraints>
+                    </view>
+                    <color key="backgroundColor" red="0.082352941176470587" green="0.082352941176470587" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="3ak-LV-0w6" firstAttribute="leading" secondItem="CfN-ke-r4A" secondAttribute="leading" id="AjY-qQ-BbU"/>
+                <constraint firstItem="3ak-LV-0w6" firstAttribute="top" secondItem="CfN-ke-r4A" secondAttribute="top" id="G1o-nq-eW4"/>
+                <constraint firstAttribute="bottom" secondItem="3ak-LV-0w6" secondAttribute="bottom" id="ty7-4B-QPI"/>
+                <constraint firstAttribute="trailing" secondItem="3ak-LV-0w6" secondAttribute="trailing" id="uav-sn-pcA"/>
+            </constraints>
+            <point key="canvasLocation" x="244" y="636"/>
+        </view>
+    </objects>
+</document>
